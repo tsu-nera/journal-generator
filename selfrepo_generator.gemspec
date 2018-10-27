@@ -5,7 +5,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "selfrepo_generator/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "selfrepo"
+  spec.name          = "selfrepo_generator"
   spec.version       = SelfrepoGenerator::VERSION
   spec.authors       = ["tsu-nera"]
   spec.email         = ["fox10225fox@gmail.com"]
