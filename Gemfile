@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'pit'
+gem 'config'
 gem 'rake'
 gem 'thor'
 

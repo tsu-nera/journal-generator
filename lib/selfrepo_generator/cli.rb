@@ -1,14 +1,16 @@
 require "selfrepo_generator"
 require "launchy"
+require "thor"
 
 module SelfrepoGenerator
-  class Cli
+  class Cli < Thor
+    desc "activity", "show activity"
     def activity
-      issue = SelfrepoGenerator.generate(options)
+      issue = SelfrepoGenerator.generate
       puts issue.title
       puts issue.body.tr("\r", "\n")
 
-      url = "https://github.com/tsu-nera/daily_report/issues/#{issue.number}" # TODO
+      url = "https://github.com/#{Settings.repository}/issues/#{issue.number}" # TODO
       Launchy.open(url)
     end
   end

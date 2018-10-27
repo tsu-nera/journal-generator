@@ -1,14 +1,15 @@
 # frozen_string_literal: true
 
 require "selfrepo_generator/version"
-require 'octokit'
-require 'erb'
-require 'selfrepo_generator/configurable'
+require "octokit"
+require "erb"
+
+require "selfrepo_generator/github"
 
 module SelfrepoGenerator
   class << self
     def gh_client
-      Octokit::Client.new Configurable.github_octokit_options
+      Octokit::Client.new access_token: Settings.github_access_token
     end
 
     def result(erb, reports)
@@ -23,21 +24,20 @@ module SelfrepoGenerator
       reports = {
         fitbit: "test"
       }
+      github = Github.new(gh_client)
 
       template = File.read(File.expand_path("../templates/template.md.erb", __dir__))
       erb = ERB.new(template, 0, "%-")
       body = result(erb, reports)
       body = body.tr("\n", "\r")
       title = daily_report_title
-      issues = Github.new(gh_client).find_same_title_issue(title)
-      title = "wip #{title}"
-      issue = if issues.first
-                issue = Github.new(gh_client).daily_report_issue(issues.first.number)
-                Github.new(gh_client).update_issue_body(issues.first.number, body)
-              else
-                Github.new(gh_client).create_issue(title: title, body: body, assignee: gh_client.user.login, labels: "daily report")
-              end
-      issue
+      issues = github.find_same_title_issue(title)
+      if issues.first
+        github.daily_report_issue(issues.first.number)
+        github.update_issue_body(issues.first.number, body)
+      else
+        github.create_issue(title: title, body: body, assignee: gh_client.user.login, labels: "daily report")
+      end
     end
   end
 end

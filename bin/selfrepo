@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
 require "selfrepo_generator/cli"
+require "config"
 
+Config.load_and_set_settings("config.yml")
 SelfrepoGenerator::Cli.start
