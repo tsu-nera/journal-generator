@@ -1,6 +1,7 @@
+# frozen_string_literal: true
+
 require "selfrepo/version"
 
 module Selfrepo
-  class Error < StandardError; end
-  # Your code goes here...
+  def generate; end
 end
