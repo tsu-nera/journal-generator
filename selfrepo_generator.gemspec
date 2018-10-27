@@ -2,11 +2,11 @@
 
 lib = File.expand_path("lib", __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "selfrepo/version"
+require "selfrepo_generator/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "selfrepo"
-  spec.version       = Selfrepo::VERSION
+  spec.version       = SelfrepoGenerator::VERSION
   spec.authors       = ["tsu-nera"]
   spec.email         = ["fox10225fox@gmail.com"]
 
