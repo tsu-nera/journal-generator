@@ -1,8 +1,11 @@
-# frozen_string_literal: true
-
 source 'https://rubygems.org'
 
-git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
+gem 'pit'
+gem 'rake'
+gem 'thor'
+
+gem 'octokit'
+gem 'launchy'
 
 # Specify your gem's dependencies in selfrepo_generator.gemspec
 gemspec

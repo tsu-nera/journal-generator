@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+require "selfrepo_generator/cli"
+
+SelfrepoGenerator::Cli.start
