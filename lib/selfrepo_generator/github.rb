@@ -1,8 +1,9 @@
+require "octokit"
+
 module SelfrepoGenerator
   class Github
-    def initialize(client)
-      @client = client
-      @login = client.login
+    def initialize
+      @client = Octokit::Client.new access_token: Settings.github_access_token
     end
 
     def update_issue_body(issue_number, body)
