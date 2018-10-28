@@ -5,11 +5,15 @@ require "erb"
 require "selfrepo_generator/version"
 require "selfrepo_generator/github"
 
+require "selfrepo_generator/plugins/fitbit"
+
 module SelfrepoGenerator
   class << self
     def generate
+      fitbit = SelfrepoGenerator::Plugins::Fitbit.new
+
       reports = {
-        fitbit: "test"
+        fitbit: fitbit.get
       }
       github = Github.new
 
