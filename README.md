@@ -1,19 +1,20 @@
-# Selfrepo Generator
+Journal Generator
+===
 
-個人的な日報作成ツール
+個人的な日記作成ツール。
 
-## Installation
+## 概要
 
-TODO: Write usage instructions here
+クラウド上のいろんなサービスから情報をかき集めて、日報を作成するツールをつくりたい。
 
-## Usage
+連携を考えているサービスは以下。
 
-TODO: Write usage instructions here
+* Twitter
+* Hatena Bookmark
+* Toggl
+* Google Calendar
+* Fitbit
 
-## Contributing
+自分リリースノートとの連携も考える。
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/tsu-nera/selfrepo_generator.
-
-## License
-
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+* [GitHubに日々の人生を記録（管理）する \- 日記、じぶんリリースノート、簡易的な個人スクラムによるふりかえりなど \- このすみろぐ](https://www.konosumi.net/entry/2019/10/15/070000)
