@@ -17,4 +17,4 @@ Journal Generator
 
 自分リリースノートとの連携も考える。
 
-* [GitHubに日々の人生を記録（管理）する \- 日記、じぶんリリースノート、簡易的な個人スクラムによるふりかえりなど \- このすみろぐ](https://www.konosumi.net/entry/2019/10/15/070000)
+https://github.com/tsu-nera/release-notes
