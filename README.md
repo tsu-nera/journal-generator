@@ -14,6 +14,13 @@ Journal Generator
 * Toggl
 * Google Calendar
 * Fitbit
+* Health Planet
+* Money Forward
+* ClickUp
+* My Fitness Pal
+* GPS
+* GitHub
+* camera
 
 自分リリースノートとの連携も考える。
 
