@@ -21,7 +21,3 @@ Journal Generator
 * GPS
 * GitHub
 * camera
-
-自分リリースノートとの連携も考える。
-
-https://github.com/tsu-nera/release-notes
